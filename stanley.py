@@ -28,12 +28,11 @@ def main():
             to_decode = input("Please enter your password to encode: ")
             for element in to_decode:
                 encoded_password += my_dict[element]
+            print("Your password has been encoded and stored!")
         elif user_input == 2:
             pass
         elif user_input == 3:
             continue_program = False
-
-    print(encoded_password)
 
 if __name__ == "__main__":
     main()
