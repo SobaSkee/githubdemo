@@ -13,26 +13,34 @@ def print_menu():
     print("3. Quit")
 
 
-def main():
+def encode(to_decode):
+    encoded_password = ''
+    my_dict = {"1": "4", "2": "5", "3": "6", "4": "7", "5": "8", "6": "9", "7": "1", "8": "2", "9": "3"}
+    for element in to_decode:
+        encoded_password += my_dict[element]
 
+
+def decode():
+    pass
+
+
+def main():
     continue_program = True
-    
+
     while continue_program:
         print_menu()
         user_input = int(input("Please enter an option: "))
-        
+
         if user_input == 1:
             # example is 12345555 and encode to 45678888
-            encoded_password = ''
-            my_dict = {"1": "4", "2": "5", "3": "6", "4": "7", "5": "8", "6": "9", "7": "1", "8": "2", "9": "3"}
             to_decode = input("Please enter your password to encode: ")
-            for element in to_decode:
-                encoded_password += my_dict[element]
+            encode(to_decode)
             print("Your password has been encoded and stored!")
         elif user_input == 2:
             pass
         elif user_input == 3:
             continue_program = False
+
 
 if __name__ == "__main__":
     main()
