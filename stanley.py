@@ -21,8 +21,15 @@ def encode(to_encode):
     return encoded_password
 
 def decode(to_decode):
-    # finish this function
-    pass
+    decoded_password = ''
+    for i in range(len(to_decode)):
+
+        if int(to_decode[i]) >= 3:
+            decoded_password += str(int(to_decode[i]) - 3)
+        else:
+            decoded_password += str(int(to_decode[i]) + 7)
+
+    return decoded_password
 
 def main():
     continue_program = True
