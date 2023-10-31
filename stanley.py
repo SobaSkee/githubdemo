@@ -16,14 +16,14 @@ def encode(to_encode):
         encoded_password += my_dict[element]
     return encoded_password
 
-def decode(to_decode):
+def decode(to_decode):    #decodes paswword by subtracting 3 from each digit
     decoded_password = ''
     for i in range(len(to_decode)):
 
         if int(to_decode[i]) >= 3:
             decoded_password += str(int(to_decode[i]) - 3)
         else:
-            decoded_password += str(int(to_decode[i]) + 7)
+            decoded_password += str(int(to_decode[i]) + 7)    #adds 7 if digit is too small
 
     return decoded_password
 
